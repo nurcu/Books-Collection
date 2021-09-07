@@ -1,4 +1,4 @@
-import styles from "./UserFormField.module.css";
+import styles from "../../styles/UI/UserFormField/UserFormField.module.css";
 
 const UserFormField = (props) => {
     return (

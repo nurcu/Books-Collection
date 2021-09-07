@@ -1,5 +1,5 @@
-import BookList from '../BookList/BookList';
-import Heading from '../Heading/Heading';
+import BookList from './BookList';
+import Heading from '../components/Heading';
 import React from 'react'
 
 const Home = () => {

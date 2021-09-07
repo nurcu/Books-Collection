@@ -1,9 +1,9 @@
-import "./App.css";
-import Home from './components/Home/Home';
-import AddNewBook from './components/AddNewBook/AddNewBook';
-import EditBook from './components/EditBook/EditBook';
+import "../styles/App/App.css";
+import Home from '../components/Home';
+import AddNewBook from '../components/AddNewBook';
+import EditBook from '../components/EditBook';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { GlobalProvider } from "./components/context/GlobalState";
+import { GlobalProvider } from "../components/context/GlobalState";
 
 function App() {
     return (

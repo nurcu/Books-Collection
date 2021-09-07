@@ -1,13 +1,13 @@
 import React, {useState, useContext, useEffect} from 'react';
-import { GlobalContext } from "../context/GlobalState";
+import { GlobalContext } from "./context/GlobalState";
 import { Link, useHistory } from 'react-router-dom';
-import styles from './EditBook.module.css';
+import styles from '../styles/EditBook/EditBook.module.css';
 import { BsPencil } from 'react-icons/bs';
 import { GiCancel } from 'react-icons/gi';
-import Button from  '../UI/Button/Button';
-import UserFormField from '../UI/UserFormField/UserFormField';
+import Button from  './UI/Button';
+import UserFormField from './UI/UserFormField';
 import Axios from "axios";
-import SelectCategory from '../UI/SelectCategory/SelectCategory';
+import SelectCategory from './UI/SelectCategory';
 
 const EditUser = (props) => {
     const [selectedUser, setSelectedUser] = useState({

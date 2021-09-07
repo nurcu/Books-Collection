@@ -1,4 +1,4 @@
-import styles from './SelectCategory.module.css'
+import styles from '../../styles/UI/SelectCategory/SelectCategory.module.css'
 
 const SelectCategory = (props) => {
     return(

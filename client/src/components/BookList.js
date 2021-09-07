@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { GlobalContext } from "../context/GlobalState";
+import { GlobalContext } from "./context/GlobalState";
 import { BsPencil } from "react-icons/bs";
 import { MdDeleteForever } from "react-icons/md";
 import Axios from "axios";
-import styles from "./BookList.module.css";
-import Button from "../UI/Button/Button";
+import styles from "../styles/BookList/BookList.module.css";
+import Button from "./UI/Button";
 
 const UserList = () => {
     const { books, removeUser } = useContext(GlobalContext);

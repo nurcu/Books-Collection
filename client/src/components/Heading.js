@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styles from "./heading.module.css";
+import styles from "../styles/Heading/heading.module.css";
 import { BiPlus } from "react-icons/bi";
 
 const Heading = () => {

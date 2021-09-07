@@ -1,12 +1,12 @@
 import React, { useState, useContext, useReducer, useEffect } from "react";
-import { GlobalContext } from "../context/GlobalState";
+import { GlobalContext } from "./context/GlobalState";
 import { Link, useHistory } from "react-router-dom";
 import Axios from "axios";
-import styles from "./AddNewBook.module.css";
+import styles from "../styles/AddNewBook/AddNewBook.module.css";
 import { GiCancel } from "react-icons/gi";
-import Button from "../UI/Button/Button";
-import UserFormField from "../UI/UserFormField/UserFormField";
-import SelectCategory from "../UI/SelectCategory/SelectCategory";
+import Button from "./UI/Button";
+import UserFormField from "./UI/UserFormField";
+import SelectCategory from "./UI/SelectCategory";
 
 const AddUser = () => {
     const { addUser } = useContext(GlobalContext);
