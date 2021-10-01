@@ -5,18 +5,18 @@ import Axios from "axios";
 import styles from "../styles/AddNewBook/AddNewBook.module.css";
 import { GiCancel } from "react-icons/gi";
 import Button from "./UI/Button";
-import UserFormField from "./UI/UserFormField";
+import BookFormField from "./UI/BookFormField";
 import SelectCategory from "./UI/SelectCategory";
 
-const AddUser = () => {
-    const { addUser } = useContext(GlobalContext);
+const AddBook = () => {
+    const { addBook } = useContext(GlobalContext);
     const history = useHistory();
     const [isFormValid, setIsFormValid] = useState(false);
 
     //book title
     const [bookTitle, dispatchBookTitle] = useReducer(
         (state, action) => {
-            if(action.type === "USER_INPUT"){
+            if(action.type === "BOOK_INPUT"){
                 return {value: action.val, isValid: action.val.length > 5}
             }
             
@@ -28,7 +28,7 @@ const AddUser = () => {
     //book price
     const [bookAuthor, dispatchBookAuthor] = useReducer(
         (state, action) => {
-            if(action.type === "USER_INPUT"){
+            if(action.type === "BOOK_INPUT"){
                 return {value: action.val, isValid: action.val.length > 5}
             }
 
@@ -40,7 +40,7 @@ const AddUser = () => {
     //bookprice
     const [bookPrice, dispatchBookPrice] = useReducer(
         (state, action) => {
-            if(action.type === "USER_INPUT"){
+            if(action.type === "BOOK_INPUT"){
                 return {value: action.val, isValid: action.val.length >= 1}
             }
 
@@ -52,7 +52,7 @@ const AddUser = () => {
     //bookSelect
     const [bookCategory, dispatchBookCategory] = useReducer(
         (state, action) => {
-            if(action.type === 'USER_INPUT'){
+            if(action.type === 'BOOK_INPUT'){
                 return {value: action.val, isValid: action.val !== ''}
             }
 
@@ -100,30 +100,30 @@ const AddUser = () => {
             bookAuthor: bookAuthor.value,
             bookCategory: bookCategory.value,
         });
-        addUser(newBook);
+        addBook(newBook);
         history.push("/");
     };
 
     const onBookTitleChange = function (e) {
-        dispatchBookTitle({type: "USER_INPUT", val: e.target.value} )
+        dispatchBookTitle({type: "BOOK_INPUT", val: e.target.value} )
     };
 
     const onAuthorChange = function (e) {
-        dispatchBookAuthor({type: 'USER_INPUT', val: e.target.value});
+        dispatchBookAuthor({type: 'BOOK_INPUT', val: e.target.value});
     };
 
     const onPriceChange = function (e) {
-        dispatchBookPrice({type: "USER_INPUT", val: e.target.value})
+        dispatchBookPrice({type: "BOOK_INPUT", val: e.target.value})
         
     };
 
     const onCategoryChange = function (e) {
-        dispatchBookCategory({type: "USER_INPUT", val: e.target.value});
+        dispatchBookCategory({type: "BOOK_INPUT", val: e.target.value});
     };
 
     return (
         <form onSubmit={onSubmit} className={`${styles.form}`}>
-            <UserFormField
+            <BookFormField
                 label="Book Title"
                 value={bookTitle.value}
                 type="text"
@@ -132,7 +132,7 @@ const AddUser = () => {
                 className={`${bookTitle.isValid === false ? styles.invalid : ''}`}
             />
 
-            <UserFormField
+            <BookFormField
                 label="Author"
                 value={bookAuthor.value}
                 type="text"
@@ -141,7 +141,7 @@ const AddUser = () => {
                 className={`${bookAuthor.isValid === false ? styles.invalid : ''}`}
             />
 
-            <UserFormField
+            <BookFormField
                 label="Price"
                 value={bookPrice.value}
                 type="number"
@@ -164,4 +164,4 @@ const AddUser = () => {
     );
 };
 
-export default AddUser;
+export default AddBook;

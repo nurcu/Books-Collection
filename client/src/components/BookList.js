@@ -7,11 +7,11 @@ import Axios from "axios";
 import styles from "../styles/BookList/BookList.module.css";
 import Button from "./UI/Button";
 
-const UserList = () => {
-    const { books, removeUser } = useContext(GlobalContext);
+const BookList = () => {
+    const { books, removeBook } = useContext(GlobalContext);
 
     const removeHandler = (id) => {
-        removeUser(id);
+        removeBook(id);
         Axios.delete(`http://localhost:3004/delete/${id}`);
     };
 
@@ -65,4 +65,4 @@ const UserList = () => {
     );
 };
 
-export default UserList;
+export default BookList;
