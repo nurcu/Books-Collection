@@ -2,7 +2,7 @@
 ## **<h2 align="center">Book Collection List 💻</h2>**
 
 <h2 align="center"> 
-        My Personal Project ✔️
+       😎 Personal Project ✔️
 </h2>
 <br>
 <p align="center">
