@@ -1,5 +1,5 @@
 
-## **<h2 align="center">Book Collection List 💻</h2>**
+## **<h2 align="center">Books Collection 💻</h2>**
 
 <h2 align="center"> 
        😎 Personal Project ✔️
