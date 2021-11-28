@@ -1,5 +1,5 @@
 {
-  "name": "client",
+  "name": "curcumy-client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,6 +16,9 @@
     "react-scripts": "4.0.3",
     "uuid": "^8.3.2",
     "web-vitals": "^1.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0"
   },
   "scripts": {
     "start": "react-scripts start",

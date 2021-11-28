@@ -11,7 +11,7 @@ const Heading = () => {
                     <li>
                         <Link className={styles.link} to="/add">
                             <BiPlus/>
-                            Add Book
+                            Add Position
                         </Link>
                     </li>
                 </nav>

@@ -1,7 +1,7 @@
 import "../styles/App/App.css";
 import Home from '../components/Home';
-import AddNewBook from '../components/AddNewBook';
-import EditBook from '../components/EditBook';
+import AddNewPosition from '../components/AddNewPosition';
+import EditPosition from '../components/EditPosition';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { GlobalProvider } from "../components/context/GlobalState";
 
@@ -12,8 +12,8 @@ function App() {
                 <Router>
                     <Switch>
                         <Route exact path="/" component={Home}  />
-                        <Route path="/add" component={AddNewBook}  />
-                        <Route path="/edit/:id" component={EditBook}  />
+                        <Route path="/add" component={AddNewPosition}  />
+                        <Route path="/edit/:id" component={EditPosition}  />
                     </Switch>
                 </Router>
             </GlobalProvider>

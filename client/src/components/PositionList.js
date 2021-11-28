@@ -4,14 +4,14 @@ import { GlobalContext } from "./context/GlobalState";
 import { BsPencil } from "react-icons/bs";
 import { MdDeleteForever } from "react-icons/md";
 import Axios from "axios";
-import styles from "../styles/BookList/BookList.module.css";
+import styles from "../styles/PositionList/PositionList.module.css";
 import Button from "./UI/Button";
 
-const BookList = () => {
-    const { books, removeBook } = useContext(GlobalContext);
+const PositionList = () => {
+    const { positions, removePosition } = useContext(GlobalContext);
 
     const removeHandler = (id) => {
-        removeBook(id);
+        removePosition(id);
         Axios.delete(`http://localhost:3004/delete/${id}`);
     };
 
@@ -19,26 +19,26 @@ const BookList = () => {
         <table className={styles["content-table"]}>
             <thead>
                 <tr>
-                    <th className={styles.title}>Book Title</th>
-                    <th className={styles.author}>Author</th>
-                    <th className={styles.category}>Category</th>
-                    <th className={styles.price}>Price</th>
-                    <th className={styles.price}>Actions</th>
+                    <th className={styles.title}>Position Title</th>
+                    <th className={styles.protocol}>Protocol</th>
+                    <th className={styles.assetType}>AssetType</th>
+                    <th className={styles.asset}>Asset</th>
+                    <th className={styles.asset}>Actions</th>
                 </tr>
             </thead>
-            {books.length > 0 && (
+            {positions.length > 0 && (
                 <tbody>
-                    {books.map((book) => {
+                    {positions.map((position) => {
                         return (
-                            <tr key={book._id}>
-                                <td>{book.bookName}</td>
-                                <td>{book.bookAuthor}</td>
-                                <td>{book.bookCategory}</td>
-                                <td>{book.bookPrice}</td>
+                            <tr key={position._id}>
+                                <td>{position.positionName}</td>
+                                <td>{position.positionProtocol}</td>
+                                <td>{position.positionAssetType}</td>
+                                <td>{position.positionAsset}</td>
                                 <td>
                                     <div className="actions">
                                         <Link
-                                            to={`/edit/${book._id}`}
+                                            to={`/edit/${position._id}`}
                                             id={styles.link}
                                             className={styles.link}
                                         >
@@ -47,7 +47,7 @@ const BookList = () => {
                                         </Link>
                                         <Button
                                             onClick={() =>
-                                                removeHandler(book._id)
+                                                removeHandler(position._id)
                                             }
                                             className={styles.button}
                                         >
@@ -65,4 +65,4 @@ const BookList = () => {
     );
 };
 
-export default BookList;
+export default PositionList;

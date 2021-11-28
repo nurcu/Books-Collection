@@ -4,7 +4,7 @@ import {AppReducer} from './AppReducer';
 
 //initial state;
 const initialState = {
-    books: []
+    positions: []
 }
 
 // create Context
@@ -20,18 +20,18 @@ export const GlobalProvider = (({children}) => {
         }, []);
 
     //actions
-    const removeBook = (id) => {
+    const removePosition = (id) => {
         dispatch({
-            type: 'REMOVE_BOOK',
+            type: 'REMOVE_POSITION',
             payload: id
         })
 
     }
 
-    const addBook = (book) => {
+    const addPosition = (position) => {
         dispatch({
-            type: 'ADD_BOOK',
-            payload: book
+            type: 'ADD_POSITION',
+            payload: position
         })
 
         setTimeout(() => {
@@ -41,19 +41,19 @@ export const GlobalProvider = (({children}) => {
         },500)
     }
 
-    const editBook = (book) => {
+    const editPosition = (position) => {
         dispatch({
-            type: 'EDIT_BOOK',
-            payload: book,
+            type: 'EDIT_POSITION',
+            payload: position,
         })
     }
      
     return(
         <GlobalContext.Provider value={{
-            books: state.books,
-            removeBook,
-            addBook,
-            editBook,
+            positions: state.positions,
+            removePosition,
+            addPosition,
+            editPosition,
         }}>
             {children}
         </GlobalContext.Provider>

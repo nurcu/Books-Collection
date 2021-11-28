@@ -7,33 +7,33 @@ export const AppReducer =  (state, action) => {
                 data.unshift(app);
             })
             return {
-                books: data
+                positions: data
             }
 
-        case 'REMOVE_BOOK':
+        case 'REMOVE_POSITION':
             return {
-                books: state.books.filter(book => {
+                positions: state.positions.filter(position => {
                     return(
-                        book._id !== action.payload
+                        position._id !== action.payload
                     )
                 })
             }
-        case 'ADD_BOOK':
+        case 'ADD_POSITION':
             return{
-                books: [action.payload, ...state.books]
+                positions: [action.payload, ...state.positions]
             }
 
-        case 'EDIT_BOOK':
-            const updateBook = action.payload;
-            const updateBooks = state.books.map(book => {
-                if(book._id === updateBook._id){
-                    return updateBook; 
+        case 'EDIT_POSITION':
+            const updatePosition = action.payload;
+            const updatePositions = state.positions.map(position => {
+                if(position._id === updatePosition._id){
+                    return updatePosition; 
                 }
 
-                return book
+                return position
             })
             return{
-                books: updateBooks
+                positions: updatePositions
             }
         default:
             return state

@@ -25,15 +25,15 @@
   width: 400px;
 }
 
-.content-table thead tr .author {
+.content-table thead tr .protocol {
   width: 200px;
 }
 
-.content-table thead tr .category {
+.content-table thead tr .assetType {
   width: 200px;
 }
 
-.content-table thead tr .price {
+.content-table thead tr .asset {
   width: 100px;
 }
 
@@ -86,4 +86,4 @@
   margin-right: 5px;
   line-height: 50px;
 }
-/*# sourceMappingURL=BookList.module.css.map */
+/*# sourceMappingURL=PositionList.module.css.map */

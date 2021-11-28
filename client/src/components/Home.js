@@ -1,4 +1,4 @@
-import BookList from './BookList';
+import PositionList from './PositionList';
 import Heading from '../components/Heading';
 import React from 'react'
 
@@ -8,9 +8,9 @@ const Home = () => {
             <Heading>
 
             </Heading>
-            <BookList>
+            <PositionList>
 
-            </BookList>
+            </PositionList>
         </React.Fragment>
     )
 }
